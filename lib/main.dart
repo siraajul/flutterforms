@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget{
 }
 
 ButtonStyle buttonStyle=ElevatedButton.styleFrom(
-  minimumSize: Size(double.infinity, 60)
+  minimumSize: const Size(double.infinity, 60)
 );
 
 class HomeActivity extends StatelessWidget{
@@ -27,26 +27,26 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text("Flutter Forms"),
+      appBar: AppBar(title: const Text("Flutter Forms"),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(18.0),
+          const Padding(
+            padding: EdgeInsets.all(18.0),
             child: TextField(decoration: InputDecoration(border:OutlineInputBorder(), labelText: 'First Name'),),
           ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
+          const Padding(
+            padding: EdgeInsets.all(18.0),
             child: TextField(decoration: InputDecoration(border:OutlineInputBorder(), labelText: 'Last  Name'),),
           ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: TextField(decoration: InputDecoration(border:OutlineInputBorder(), labelText: 'eMail Adress'),),
+          const Padding(
+            padding: EdgeInsets.all(18.0),
+            child: TextField(decoration: InputDecoration(border:OutlineInputBorder(), labelText: 'eMail Address'),),
           ),
           Padding(
             padding: const EdgeInsets.all(18.0),
-            child: ElevatedButton(onPressed: (){},child: Text("Submit"),style: buttonStyle,)
+            child: ElevatedButton(onPressed: (){},style: buttonStyle,child: const Text("Submit"),)
           )
         ],
       ),
